@@ -14,27 +14,28 @@ body {
     padding: var(--button-padding);
 }
 
+.eye {
+    background-color: white;
+    margin-right: var(--button-padding);
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    -webkit-mask-image: url("create-view-white.svg");
+    mask-image: url("create-view-white.svg");
+}
+
+.label {
+    position: relative;
+    top: -2px;
+}
+
 .button:hover {
     color: var(--color-background);
     background-color: white;
 }
 
-.eye {
-    margin: var(--button-padding);
-}
-
-.eye::before {
-    content: url("create-view-white.svg");
-    position: relative;
-    top: 3px;
-}
-
-.button:hover .eye::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
+.button:hover .eye {
     background-color: var(--color-background);
-    -webkit-mask-image: url("create-view-white.svg");
-    mask-image: url("create-view-white.svg");
 }
