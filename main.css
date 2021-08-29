@@ -1,0 +1,40 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: yellow;
+    --color-background: #0ee3dd;
+}
+
+.button {
+    color: white;
+    background-color: var(--color-background);
+    border: none;
+    --button-padding: 0.5em;
+    padding: var(--button-padding);
+}
+
+.button:hover {
+    color: var(--color-background);
+    background-color: white;
+}
+
+.eye {
+    margin: var(--button-padding);
+}
+
+.eye::before {
+    content: url("create-view-white.svg");
+    position: relative;
+    top: 3px;
+}
+
+.button:hover .eye::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-background);
+    -webkit-mask-image: url("create-view-white.svg");
+    mask-image: url("create-view-white.svg");
+}
